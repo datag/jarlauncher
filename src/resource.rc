@@ -1,0 +1,43 @@
+/* http://msdn.microsoft.com/en-us/library/windows/desktop/aa380599(v=vs.85).aspx */
+
+#include <windows.h>
+#include "config.h"
+
+#ifndef IDC_STATIC
+#define IDC_STATIC (-1)
+#endif
+
+#define IDI_APPICON   100
+
+IDI_APPICON   ICON    "res/appicon.ico"
+
+
+1 VERSIONINFO
+ FILEVERSION 1,1,0,0
+ PRODUCTVERSION 1,1,0,0
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+/* FILEFLAGS 0x0 */
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE  VFT_APP
+/* FILESUBTYPE  VFT2_UNKNOWN */
+ 
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+		   VALUE "CompanyName", "Dominik Geyer"
+		   VALUE "FileDescription", JAVA_APP_NAME " launcher"
+		   VALUE "FileVersion", "1.1"
+		   VALUE "InternalName", "JarLauncher"
+		   VALUE "LegalCopyright", "GNU Public License"
+		   VALUE "OriginalFilename", "JarLauncher.exe"
+		   VALUE "ProductName", JAVA_APP_NAME
+		   VALUE "ProductVersion", "1.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200	/* English (U.S.), Unicode */
+    END
+END
